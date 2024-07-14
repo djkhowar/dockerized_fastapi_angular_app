@@ -1,12 +1,12 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from uuid import uuid4
-from dotenv import load_dotenv
+#from dotenv import load_dotenv
 
 import os
 
 # Load environment variables from .env file
-load_dotenv()
+#load_dotenv()
 
 # Access the variables
 username = os.getenv('username')
