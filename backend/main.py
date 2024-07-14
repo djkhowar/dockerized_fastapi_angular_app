@@ -13,20 +13,19 @@ username = os.getenv('username')
 
 print(f'Username: {username}')
 
-
 app = FastAPI()
 
 @app.get('/')
 async def index():
-    users = []
-    for i in range(10): 
-        user = {
-            "id":str(uuid4()), 
-            "name":f"{username} - {i+1}", 
-            "designation": f"Designation {i+1}"
-        }
-        users.append(user)
-    return users
+    variables = os.environ
+    # for i in range(10): 
+    #     user = {
+    #         "id":str(uuid4()), 
+    #         "name": f"{username} - {i+1}", 
+    #         "designation": f"Designation {i+1}"
+    #     }
+    #     users.append(user)
+    return variables
 
 
 origins = [
